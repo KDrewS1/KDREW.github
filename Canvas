@@ -1,7 +1,2 @@
 <canvas id="myCanvas" width="200" height="100"></canvas>
-<script>
-  var c = document.getElementById(“myCanvas”); 
-  var ctx = c.getContext("2d”); 
-  ctx.font = “30px Arial”;
-  ctx.fillText(“Blogger Portfolio”), 10, 50); 
-</script>
+
