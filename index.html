@@ -1,145 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Kaleb's College Blog Website</title>
-</head>
-  <body>
-    <h1>Blog Central</h1>
-    <canvas id="myCanvas" width="400" height="200"></canvas> 
-    
-<script>
-  var c = document.getElementById("myCanvas"); 
-  var ctx = c.getContext("2d"); 
-  ctx.font = "15px Arial";
-  ctx.fillText("New stories, Blogger?", 10, 50); 
-</script>
-</body>
-</html>
-<button class="tablink" onclick="openPage('Blog', this, 'green')">Blog</button>
-<button class="tablink" onclick="openPage('New Blog', this, 'yellow')" id="defaultOpen">New Blog</button>
-<button class="tablink" onclick="openPage('Profile', this, 'pink')">Profile</button>
-<button class="tablink" onclick="openPage('Upload', this, 'red')">Upload</button>
-
-<div id="Blog" class="tabcontent">
-  <h3>Blog</h3>
-  <p>This is the start of Blog Central And all dialect included.</p>
-</div>
-
-<div id="New Blog" class="tabcontent">
-  <h3>New Blog</h3>
-  <p>Newest Blog's Here.</p>
-</div>
-
-<div id="Profile" class="tabcontent">
-  <h3>Profile</h3>
-  <p>Access the blog that you can add to.</p>
-</div>
-
-<div id="Upload" class="tabcontent">
-  <h3>Upload</h3>
-  <p>Page dedicated for uploads</p>
-</div>
-
-<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {box-sizing: border-box}body, html {
-  height: 100%;
-  margin: 0;
-  font-family: Arial;
-}
-
-.tablink {
-  background-color: #777;
-  color: blue;
-  float: left;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  padding: 14px 16px;
-  font-size: 17px;
-  width: 25%;
-}
-
-.tablink:hover {
-  background-color: #888;
-}
-
-.tabcontent {
-  color: pink;
-  display: none;
-  padding: 100px 20px;
-  height: 100%;
-}
-
-#Blog {background-color: green;}
-#New Blog {background-color: yellow;}
-#Profile {background-color: pink;}
-#Upload {background-color: red;}
-
-function openPage(pageName, elmnt, color) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-
-  tablinks = document.getElementsByClassName("tablink");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].style.backgroundColor = "";
-  }
-
-  document.getElementById(pageName).style.display = "block";
-
-  elmnt.style.backgroundColor = color;
-}
-
-document.getElementById("defaultOpen").click();
-</script>
-   
-</body>
-</html> 
-  
-<!DOCTYPE html>
-<html>
-<head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 body {
   font-family: 'Lato', sans-serif;
-
-  .overlay {
-  height: 100%;
-  width: 0;
-  position: fixed; 
-  z-index: 1; 
-  left: 0;
-  top: 0;
-  background-color: rgb(0,0,0); 
-  background-color: rgba(0,0,0, 0.9); 
-  overflow-x: hidden; 
-  transition: 0.5s; 
 }
 
+.overlay {
+  height: 0%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: rgb(0,0,0);
+  background-color: rgba(0,0,0, 0.9);
+  overflow-y: hidden;
+  transition: 0.5s;
+}
 
 .overlay-content {
   position: relative;
-  top: 25%; 
-  width: 100%; 
-  text-align: center; 
-  margin-top: 30px; 
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
 }
-
 
 .overlay a {
   padding: 8px;
   text-decoration: none;
   font-size: 36px;
   color: #818181;
-  display: block; 
-  transition: 0.3s; 
+  display: block;
+  transition: 0.3s;
 }
 
 .overlay a:hover, .overlay a:focus {
@@ -153,16 +48,16 @@ body {
   font-size: 60px;
 }
 
-
 @media screen and (max-height: 450px) {
+  .overlay {overflow-y: auto;}
   .overlay a {font-size: 20px}
   .overlay .closebtn {
-    font-size: 40px;
-    top: 15px;
-    right: 35px;
+  font-size: 40px;
+  top: 15px;
+  right: 35px;
   }
 }
-  </style>
+</style>
 </head>
 <body>
 
@@ -171,17 +66,18 @@ body {
   <div class="overlay-content">
     <a href="#">About</a>
     <a href="#">Profile</a>
-    <a href="#">Blog</a>
+    <a href="#">Newest Blog</a>
     <a href="#">Upload</a>
   </div>
 </div>
 
-<h2>Hi This Blog confroms to view's too</h2>
-<p>Fullscreen navigation</p>
-<p>Join now, find the About page</p>
+<h2>This Blog Conforms to views too</h2>
+<p>Click on the element below to open the fullscreen overlay navigation menu.</p>
+<p>Find the About page if your interested:</p>
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
 
-<script>function openNav() {
+<script>
+function openNav() {
   document.getElementById("myNav").style.height = "100%";
 }
 
