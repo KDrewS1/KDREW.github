@@ -67,104 +67,6 @@ body {
 </head>
 <body>
 
-<div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-  <div class="overlay-content">
-    <a href="#">About</a>
-    <a href="#">StayTuned</a>
-    <a href="#">Main Blog Page</a>
-    <a href="#">Updates</a>
-  </div>
-</div>
-
-<h2>This Blog Conforms to views too</h2>
-<p>Click on the element below to open the fullscreen overlay navigation menu.</p>
-<p>Find the About page if your interested:</p>
-<span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
-
-<script>
-function openNav() {
-  document.getElementById("myNav").style.height = "100%";
-}
-
-function closeNav() {
-  document.getElementById("myNav").style.height = "0%";
-}
-</script>
-     
-</body>
-</html>
-
-<canvas id="myCanvas" width="200" height="100" style="border:1px solid #d3d3d3;">
-Your browser does not support the HTML canvas tag.</canvas>
-
-<script>
-var c = document.getElementById("myCanvas");
-var ctx = c.getContext("2d");
-ctx.font = "30px Arial";
-ctx.strokeText("Hey Bloggers",10,50);
-</script>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-* {
-  box-sizing: border-box;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: #f1f1f1;
-  padding: 10px;
-  text-align: center;
-}
-
-ul.topnav {
-  display: flex;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  background-color: #333333;
-}
-
-ul.topnav li a {
-  display: block;
-  color: #f1f1f1;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-ul.topnav li a:hover {
-  background-color: #dddddd;
-  color: pink;
-}
-
-div.flex-container {
-  display: flex;
-  flex-direction: row;
-}
-
-div.flex-container > div {
-  margin: 10px;
-}
-
-@media screen and (max-width:600px) {
-  div.flex-container {
-    flex-direction: column;
-  }
-}
-</style>
-</head>
-<body>
-
-<header>
-  <h1>Blog Central</h1>
-  <p>Hello Bloggers</p>
-</header>
 
 <ul class="topnav">
   <li><a href="#">About</a></li>
@@ -192,5 +94,108 @@ div.flex-container > div {
 
 </body>
 </html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
 
+.navbar {
+  overflow: hidden;
+  background-color: #333; 
+}
 
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.subnav {
+  float: left;
+  overflow: hidden;
+}
+
+.subnav .subnavbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .subnav:hover .subnavbtn {
+  background-color: red;
+}
+
+.subnav-content {
+  display: none;
+  position: absolute;
+  left: 0;
+  background-color: pink;
+  width: 100%;
+  z-index: 1;
+}
+
+.subnav-content a {
+  float: left;
+  color: white;
+  text-decoration: none;
+}
+
+.subnav-content a:hover {
+  background-color: #eee;
+  color: black;
+}
+
+.subnav:hover .subnav-content {
+  display: block;
+}
+</style>
+</head>
+<body>
+  <div class="navbar">
+  <div class="subnav">
+    <button class="subnavbtn">About <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href=“#school”>School</a>
+      <a href=“#me”>Me</a>
+      <a href=“#passion”>Passion</a>
+    </div>
+  </div> 
+  <div class="subnav">
+    <button class="subnavbtn">Stay Tuned<i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#read">Read</a>
+      <a href="#view">View</a>
+      <a href="#previews">Previews</a>
+      <a href="#examples">Examples</a>
+    </div>
+  </div> 
+  <div class="subnav">
+    <button class="subnavbtn">Main Blog Page <i class="fa fa-caret-down"></i></button>
+    <div class="subnav-content">
+      <a href="#link1">Link 1</a>
+      <a href="#link2">Link 2</a>
+      <a href="#link3">Link 3</a>
+      <a href="#link4">Link 4</a>
+    </div>
+  </div>
+  <a href="#updates">Updates</a>
+</div>
+
+<div style="padding:0 16px">
+  <h3>Subnav/dropdown menu inside a Navigation Bar</h3>
+  <p>Hover over the "About", “Stay Tuned or “Main Blog Page” link to see the sub navigation menu.</p>
+</div>
+
+</body>
+</html>
