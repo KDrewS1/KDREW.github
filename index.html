@@ -308,11 +308,11 @@ footer {
       <p>The support is greatly valued.</p>
     </div>
     <div id="mainblogpage" class="tab-pane fade">
-      <h3>Main Blog Page</h3>
+      <h15>Main Blog Page</h15>
       <p>The Main Blog page will be what gets users closer to writing blogs and making sure my blog updates are in effect or not and consist of stories and natural context of new post's highlighted and users connecting.</p>
     </div>
     <div id="updates" class="tab-pane fade">
-      <h15>Updates</h15>
+      <h16>Updates</h16>
       <p>Updates are consistantly being inputed.</p>
     </div>
   </div>
@@ -339,9 +339,106 @@ $(document).ready(function(){
   }
 };
 
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+
+.open-button {
+  background-color: #555;
+  color: pink;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+
+.chat-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: pink;
+}
+
+.form-container textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+  resize: none;
+  min-height: 200px;
+}
+
+.form-container textarea:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+.form-container .btn {
+  background-color: #04AA6D;
+  color: blue;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+.form-container .cancel {
+  background-color: red;
+}
+
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+</style>
+</head>
 <body>
 
-<script>
+<h17>Live Chat</h17>
+<p>Click Chat to chat Live and speak with me directly for inquiries .</p>
+<p>Keep it professioanl</p>
 
-  }
+<button class="open-button" onclick="openForm()">Chat</button>
+
+<div class="chat-popup" id="myForm">
+  <form action="/action_page.php" class="form-container">
+    <h18>Chat</h18>
+
+    <label for="msg"><b>Message</b></label>
+    <textarea placeholder="Type message.." name="msg" required></textarea>
+
+    <button type="submit" class="btn">Send</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+<script>
+function openForm() {
+  document.getElementById("myForm").style.display = "block";
 }
+
+function closeForm() {
+  document.getElementById("myForm").style.display = "none";
+}
+</script>
+
+</body>
+
