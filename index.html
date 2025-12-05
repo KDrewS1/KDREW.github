@@ -104,3 +104,95 @@ var ctx = c.getContext("2d");
 ctx.font = "30px Arial";
 ctx.strokeText("Hey Bloggers",10,50);
 </script>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+}
+
+ul.topnav {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  background-color: #333333;
+}
+
+ul.topnav li a {
+  display: block;
+  color: #f1f1f1;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover {
+  background-color: #dddddd;
+  color: pink;
+}
+
+div.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+div.flex-container > div {
+  margin: 10px;
+}
+
+@media screen and (max-width:600px) {
+  div.flex-container {
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Blog Central</h1>
+  <p>Hello Bloggers</p>
+</header>
+
+<ul class="topnav">
+  <li><a href="#">About</a></li>
+  <li><a href="#">Profile</a></li>
+  <li><a href="#">Newest Blog</a></li>
+  <li><a href="#">Upload</a></li>
+</ul>
+
+<div class="flex-container">
+  <div>
+    <h2>Bloggers Welcome</h2>
+    <p>Find the Ultimate Blog or concern start here and develop your story even if it's apart of another.</p>
+  </div>
+
+  <div>
+    <h2>My Goal</h2>
+    <p>To reach a valid reason is to try, but if we try to much are we over doing it. I say no. We can achieve the most with effort and more the benifits may include rough stories or even professional output I hope to find myself facing the same issues as anyone else in a blog and find that I'm not alone or dumb.</p>
+  </div>
+
+  <div>
+    <h2>Your possibilities</h2>
+    <p>Try expanding your contact with me if you are interested do let me know through resources and amazing blog post to think about.</p>
+  </div>  
+</div>
+
+</body>
+</html>
+
+
